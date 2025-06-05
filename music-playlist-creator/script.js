@@ -2,12 +2,11 @@
 const modal = document.getElementById("modal-overlay");
 const span = document.getElementsByClassName("close")[0];
 
-function openModal(festival) {
-   document.getElementById('festivalName').innerText = festival.name;
-   document.getElementById('festivalImage').src = festival.imageUrl;
-   document.getElementById('festivalDates').innerText = `Dates: ${festival.dates}`;
-   document.getElementById('festivalLocation').innerText = `Location: ${festival.location}`;
-   document.getElementById('artistLineup').innerHTML = `<strong>Lineup:</strong> ${festival.lineup.join(', ')}`;
+function openModal(playlist) {
+   document.getElementById('playlistImage').src = playlist.imageUrl;
+   document.getElementById('playlistTitle').innerText = playlist.name;
+   document.getElementById('artistName').innerText = `Dates: ${playlist.dates}`;
+   document.getElementById('playlistSongs').innerHTML = `${playlist.lineup.join(', ')}`;
    modal.style.display = "block";
 }
 
@@ -19,3 +18,9 @@ window.onclick = function(event) {
       modal.style.display = "none";
    }
 }
+
+
+
+document.addEventListener("DOMContentLoaded",() => {
+   
+})

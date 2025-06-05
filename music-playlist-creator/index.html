@@ -16,99 +16,46 @@
         <h1>Music Playlist Explorer</h1>
         </nav>
     </header>
-
+    
     <main> 
         <!-- Your main content here -->
         <section class="playlist-cards">
             
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
+        <div class="playlist-item" onclick="openModal({name: 'The Cookout Playlist', imageUrl: '/assets/img/playlist.png', dates: 'July 15-17', lineup: ['Artist A', 'Artist B']})">
         <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
         <h1>Playlist Title</h1>
         <p>Creator Name</p>
         <p>Like Count Here</p>
         </div>
 
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
+        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: '/assets/img/playlist.png', dates: 'July 15-17', lineup: ['Artist A', 'Artist B']})">
         <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
         <h1>Playlist Title</h1>
         <p>Creator Name</p>
         <p>Like Count Here</p>
         </div>
 
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
-        <div class="playlist-item" onclick="openModal({name: 'Summer Beats Festival', imageUrl: 'path/to/festival.jpg', dates: 'July 15-17', location: 'Downtown Park', lineup: ['Artist A', 'Artist B']})">
-        <img src="/assets/img/playlist.png" alt="playlist-image" class="playlist-image"/>
-        <h1>Playlist Title</h1>
-        <p>Creator Name</p>
-        <p>Like Count Here</p>
-        </div>
-
+        
 
         
         <!-- Modal Structure -->
         <div id="modal-overlay" class="modal">
         <div class="modal-content">
         <span class="close">&times;</span>
-        <h1 id="festivalName"></h1>
-        <img id="festivalImage" src="" alt="Festival Image">
-        <p id="festivalDates"></p>
-        <p id="festivalLocation"></p>
-        <div id="artistLineup"></div>
+        
+        <div class="modal-main">
+        <div class="upper-modal">
+        <img id="playlistImage" src="/assets/img/playlist.png" alt="Playlist Image">
+        <h1 id="playlistTitle"></h1>
+        <p id="artistName"></p>
+        </div>
+        
+
+        <div class="modal-side"></div>
+        <div id="playlistSongs"></div>
+        </div>
+
+
         </div>
         </div>
         <!------------------>

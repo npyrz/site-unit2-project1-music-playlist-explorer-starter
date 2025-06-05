@@ -1,0 +1,37 @@
+{
+    "playlists": [
+        {
+            "playlistID": "",
+            "playlist_name": "",
+            "playlist_author": "", 
+            "playlist_art": "",
+            "songs": [
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "playlistID": "",
+            "playlist_name": "",
+            "playlist_author": "", 
+            "playlist_art": "",
+            "songs": [
+                "",
+                "",
+                ""
+            ]
+        },
+        {
+            "playlistID": "",
+            "playlist_name": "",
+            "playlist_author": "", 
+            "playlist_art": "",
+            "songs": [
+                "",
+                "",
+                ""
+            ]
+        }
+    ]
+}
