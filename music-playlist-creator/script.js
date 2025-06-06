@@ -12,37 +12,38 @@ function createReviewElement(review) {
    reviewDiv.appendChild(playlistName);
 
    const playlistAuthor = document.createElement("p");
-   playlistAuthor.textContent = review.playlist_author;
+   playlistAuthor.textContent = "Creator: " + review.playlist_author;
    reviewDiv.appendChild(playlistAuthor);
 
-   const likesIcon = document.createElement("i");
-   likesIcon.setAttribute("class", "fa-regular fa-heart");
+   const likesIcon = document.createElement("button");
+   likesIcon.setAttribute("class", "like-button");
+   likesIcon.innerHTML = "Like";
    reviewDiv.appendChild(likesIcon);
-
-   likesIcon.addEventListener('click', function() {
-      console.log("HEY")
-      var likeStatus = false;
-
-      if (likeStatus = false) {
-         likesIcon.setAttribute("class", "fa-regular fa-heart");
-         reviewDiv.appendChild(likesIcon);
-         likeStatus = true;
-      };
-      elseif (likeStatus = true) {
-         likesIcon.setAttribute("class", "fa-solid fa-heart");
-         reviewDiv.appendChild(likesIcon);
-         likeStatus = false;
-      }
-   });
-
-   // add event handler to check if clickec then changed to 
-   // <i class="fa-solid fa-heart"></i>
-   // increment 
-   // if clicked added then decrement and change back
 
    const playlistLikes = document.createElement("p");
    playlistLikes.textContent = review.playlist_likes;
    reviewDiv.appendChild(playlistLikes);
+
+
+   let liked = false;
+   likesIcon.addEventListener('click', function() {
+      let amount = parseInt(review.playlist_likes);
+      if (!liked) {
+         likesIcon.classList.add("liked");
+         likesIcon.innerHTML = "Liked";
+         amount++;
+         liked = true;
+      }  
+      else {
+         amount;
+         liked = false;
+         likesIcon.classList.remove("liked");
+         likesIcon.innerHTML = "Like";
+      }
+
+      playlistLikes.textContent = amount;
+      review.playlistLikes = amount.toString();
+   });
 
 
    playlistImg.addEventListener('click', function() {
@@ -51,7 +52,7 @@ function createReviewElement(review) {
    const headerModal = document.getElementById('playlistTitle');
    headerModal.innerHTML = review.playlist_name;
    const authorModal = document.getElementById('artistName');
-   authorModal.innerHTML = review.playlist_author;
+   authorModal.innerHTML = "Creator: " + review.playlist_author;
    const imgModal = document.getElementById('playlistImage');
    imgModal.src = review.playlist_image;
 
@@ -59,14 +60,13 @@ function createReviewElement(review) {
       const songTitle = document.getElementById("songTitle");
       songTitle.innerHTML = song.title;
       const songArtist = document.getElementById("songArtist")
-      songArtist.innerHTML = song.artist;
+      songArtist.innerHTML = "Artist: " + song.artist;
       const songDuration = document.getElementById("songDuration");
-      //songDuration.innerHTML = song.duration;
+      songDuration.innerHTML = song.duration;
       const songImg = document.getElementById('songImg');
       songImg.src = song.img;
       const songAlbum = document.getElementById('songAlbum');
-      songAlbum.innerHTML = song.album;
-      // FIX THE LOCATION OF DURATION
+      songAlbum.innerHTML = "Album: " + song.album;
    })
 
    
@@ -91,18 +91,6 @@ function loadReviews() {
       reviewList.appendChild(reviewElement)
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 function errorPlaylistNotify() {
    const reviewDiv = document.createElement('div');

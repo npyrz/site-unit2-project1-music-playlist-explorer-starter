@@ -6,7 +6,6 @@
     
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <script src="https://kit.fontawesome.com/d8b4305d3c.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,6 +14,7 @@
         <!-- Your header content here -->
         <nav>
         <h1>Music Playlist Explorer</h1>
+        <button class="featuredButton" onclick="location.href = 'featured.html'">Featured</button>
         </nav>
     </header>
     
@@ -29,10 +29,13 @@
         <div class="modal-main">
 
         <div class="upper-modal">
+        <div class="img-button">
         <img id="playlistImage"/>
+        </div>
         <div class="modalInfoContent">
-            <h1 id="playlistTitle"></h1>
+            <h2 id="playlistTitle"></h2>
             <p id="artistName"></p>
+            <button class="shuffle-button">Shuffle</button>
         </div>
         </div>
         
@@ -41,12 +44,12 @@
         <div class="songLeftSide">
         <img id="songImg" class="songImg"/>
         <div class="songInfo">
-        <h1 class="songTitle" id="songTitle"></h1>
+        <h2 class="songTitle" id="songTitle"></h2>
         <p class="songArtist" id="songArtist"></p>
         <p class="songAlbum" id="songAlbum"></p>
+        <p class="songDuration" id="songDuration"></p>
         </div>
         </div>
-        <div class="songDuration" id="songDuration"></div>
         </div>
         </div>
         
@@ -61,8 +64,7 @@
     </div>
     </main>
 
-    <footer>
-        <!-- Your footer content here -->
+    <footer>        
     </footer>
     <script src="data.js"></script>
     <script src="script.js"></script>
