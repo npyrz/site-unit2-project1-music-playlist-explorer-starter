@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Featured Music Playlist Explorer</title>
+    <title>Featured Music Playlist</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     
     <link rel="stylesheet" href="style.css">
@@ -13,18 +13,42 @@
     <header>
         <!-- Your header content here -->
         <nav>
-        <h1>Featured Music Playlist Explorer</h1>
+        <h1>Featured Music Playlist</h1>
         <button class="homeButton" onclick="location.href = 'index.html'">Home</button>
         </nav>
     </header>
-    
     <main> 
-        
-    </main>
+        <div class="featuredList" id="featuredList">
+        <img class="featuredImg" id="featuredImg"/>
+        <h1 class="featuredTitle" id="featuredTitle"></h1>
+        <p class="featuredAuthor" id="featuredAuthor"></p>
+        <button class="songButton" id="songButton">Songs</button>
+        </div>
 
-    <footer>
-        <!-- Your footer content here -->
-    </footer>
+        <div id="modal-overlay" class="modal">
+        <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-main">
+        
+        <div class="modal-bottom">
+        <div class="songList" id="songList">
+        <div class="songLeftSide">
+        <img id="songImg" class="songImg"/>
+        <div class="songInfo">
+        <h2 class="songTitle" id="songTitle"></h2>
+        <p class="songArtist" id="songArtist"></p>
+        <p class="songAlbum" id="songAlbum"></p>
+        <p class="songDuration" id="songDuration"></p>
+        </div>
+        </div>
+        </div>
+        </div>
+        
+
+        </div>
+        </div>
+        </div>
+    </main>
     <script src="data.js"></script>
     <script src="featured.js"></script>
 </body>
