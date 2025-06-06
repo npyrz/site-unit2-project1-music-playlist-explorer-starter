@@ -135,7 +135,14 @@ function loaderrorPlaylists() {
       const reviewElement = errorPlaylistNotify(review)
       reviewList.appendChild(reviewElement)
    }
-}
+};
+
+const shuffleButton = document.getElementById("shuffle-button");
+shuffleButton.addEventListener('click', function() {
+   console.log("clicked");
+   });
+
+
 
 document.addEventListener("DOMContentLoaded", (event) => {
    try {
