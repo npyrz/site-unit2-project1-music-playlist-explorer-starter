@@ -20,9 +20,20 @@ function createPlaylistElement(playlist) {
    likesIcon.innerHTML = "🤍";
    playlistDiv.appendChild(likesIcon);
 
+   const deleteIcon = document.createElement("a");
+   deleteIcon.setAttribute("class", "delete-button");
+   deleteIcon.innerHTML = "🗑️";
+   playlistDiv.appendChild(deleteIcon);
+
    const playlistLikes = document.createElement("p");
    playlistLikes.textContent = playlist.playlist_likes;
    playlistDiv.appendChild(playlistLikes);
+
+   deleteIcon.addEventListener('click', function() {
+      playlistDiv.remove();
+   });
+
+
 
    let liked = false;
    likesIcon.addEventListener('click', function() {
@@ -42,7 +53,6 @@ function createPlaylistElement(playlist) {
       playlist.playlistLikes = amount.toString();
    });
    
-   // Clicking on image of playlist loads modal overlay
    playlistImg.addEventListener('click', function() {
    const modal = document.getElementById("modal-overlay");
    const span = document.getElementsByClassName("close")[0];
@@ -162,6 +172,7 @@ function loadPlaylists() {
 function errorPlaylistNotify() {
    const playlistDiv = document.createElement('div');
    playlistDiv.setAttribute('class', 'playlist-item');
+   playlistDiv.setAttribute("id", "playlist-item");
    const playlistName = document.createElement("h1");
    playlistName.textContent = `Error: There are no playlists added!`;
    playlistDiv.appendChild(playlistName);

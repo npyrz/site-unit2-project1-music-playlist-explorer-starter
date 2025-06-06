@@ -97,9 +97,9 @@ Deployed Application: [Music Playlist Explorer Deployed Site](https://site-unit2
     - [ ] Editing all of a playlist's features (name, creator, AND songs)
     - [ ] Editing some of a playlist's features (name, creator, OR songs) 
 
-- [ ] **Delete Playlists**
-  - [ ] Add a delete button to each playlist tile within the grid view.
-  - [ ] When clicked, the playlist is removed from the playlist grid view.
+- [X] **Delete Playlists**
+  - [X] Add a delete button to each playlist tile within the grid view.
+  - [X] When clicked, the playlist is removed from the playlist grid view.
 
 - [ ] **Search Functionality**
   - [ ] Implement a search bar that allows users to filter playlists by:
@@ -135,15 +135,15 @@ Deployed Application: [Music Playlist Explorer Deployed Site](https://site-unit2
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Overall I would say that the topics that we learned in lecture were very helpful with getting prepared for this project, also it was a resource to reference back to and get information when needed. Regarding the labs I would say that the labs were pretty well helpful. There were some parts I would say I got lost with the Javascript lab but was able to understanding after digging further and looking at the lab solutions. So overall I would say that the labs were very prepareful for the project to complete.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
-Add your response here
+
+If I had more time for this project I definitly think I would have finished more stretches as I would have more time to work on it as the time getting back into the process of the language and doing web dev took me awhile to get back into. I also feel like I spent a lot of unessecary time spending on working on fixing minor css issues. But overall I would take a more stronger approach trying to focus on getting all the core features needed to get done with the best way of getting it done then focusing on stretch features. But I beleive this was a good intro for me and I will do better and apply what I learned from this week to nexts weeks project.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+As mentioned above it took me awhile to get back into the langauge and doing web development and I would say it definitly got me off focus having to deal and focus on small issues with my CSS which I shouldn't have done and just worried about getting the core features done. I plan on learning from this week and applying it to next week with approaching the project faster and more effiecnt and continue to stay engange in class as which I think thats what helped me the most this week.
 
 ### Open-source libraries used
 
