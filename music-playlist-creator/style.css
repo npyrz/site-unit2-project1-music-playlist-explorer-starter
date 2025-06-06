@@ -148,6 +148,9 @@ header {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    border-radius: 15px;
+    border-style: solid;
+    margin: 5px;
 }
 
 .songDuration {
