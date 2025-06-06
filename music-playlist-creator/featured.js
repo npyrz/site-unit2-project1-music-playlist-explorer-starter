@@ -1,23 +1,22 @@
-function createFeaturedElement(review) {
-    const randomPlaylist = Math.floor(Math.random() * reviews.length);
-    const selectedRandom = reviews[randomPlaylist]; 
-
-    const reviewDiv = document.getElementById('featuredList');
+function createFeaturedElement(playlist) {
+    const randomPlaylist = Math.floor(Math.random() * playlists.length);
+    const selectedRandom = playlists[randomPlaylist]; 
+    const featuredDiv = document.getElementById('featuredList');
 
     const playlistImg = document.getElementById("featuredImg");
     playlistImg.src = selectedRandom.playlist_image;
-    reviewDiv.appendChild(playlistImg);
+    featuredDiv.appendChild(playlistImg);
 
     const playlistName = document.getElementById("featuredTitle");
     playlistName.innerHTML = selectedRandom.playlist_name;
-    reviewDiv.appendChild(playlistName);
+    featuredDiv.appendChild(playlistName);
 
     const playlistAuthor = document.getElementById("featuredAuthor");
     playlistAuthor.innerHTML = "Creator: " + selectedRandom.playlist_author;
-    reviewDiv.appendChild(playlistAuthor);
+    featuredDiv.appendChild(playlistAuthor);
 
     const featuredButton = document.getElementById("songButton");
-    reviewDiv.appendChild(featuredButton);
+    featuredDiv.appendChild(featuredButton);
 
     featuredButton.addEventListener('click', function() {
     const modal = document.getElementById("modal-overlay");
@@ -26,7 +25,7 @@ function createFeaturedElement(review) {
     const songList = document.getElementById("songList");
     songList.innerHTML = " ";
 
-    review.songs.forEach(song => {
+    playlist.songs.forEach(song => {
         const songContainer = document.createElement("div");
         songContainer.classList.add("songLeftSide");
 
@@ -62,19 +61,6 @@ function createFeaturedElement(review) {
         songList.appendChild(songContainer);
     });
 
-//     review.songs.forEach(song => {
-//     const songTitle = document.getElementById("songTitle");
-//     songTitle.innerHTML = song.title;
-//     const songArtist = document.getElementById("songArtist")
-//     songArtist.innerHTML = "Artist: " + song.artist;
-//     const songDuration = document.getElementById("songDuration");
-//     songDuration.innerHTML = song.duration;
-//     const songImg = document.getElementById('songImg');
-//     songImg.src = song.img;
-//     const songAlbum = document.getElementById('songAlbum');
-//     songAlbum.innerHTML = "Album: " + song.album;
-// })
-
     modal.style.display = "block";
     span.onclick = function() {
     modal.style.display = "none";
@@ -84,40 +70,20 @@ function createFeaturedElement(review) {
         modal.style.display = "none";
     }
     }
-    })
+    });
 
-    return reviewDiv;
+    return featuredDiv;
 }
 
 function loadFeatured() {
-    const reviewList = document.getElementById('featuredList')
+    const featuredList = document.getElementById('featuredList')
 
-    for (const review of reviews) {
-        const reviewElement = createFeaturedElement(review)
-        reviewList.appendChild(reviewElement)
+    for (const playlist of playlists) {
+        const featuredElement = createFeaturedElement(playlist)
+        featuredList.appendChild(featuredElement)
     }
 }
-
-
 
 document.addEventListener("DOMContentLoaded", (event) => {
     loadFeatured();
 })
-
-
-
-
-
-
-   // review.songs.forEach(song => {
-    //     const songTitle = document.getElementById("songTitle");
-    //     songTitle.innerHTML = song.title;
-    //     const songArtist = document.getElementById("songArtist")
-    //     songArtist.innerHTML = "Artist: " + song.artist;
-    //     const songDuration = document.getElementById("songDuration");
-    //     songDuration.innerHTML = song.duration;
-    //     const songImg = document.getElementById('songImg');
-    //     songImg.src = song.img;
-    //     const songAlbum = document.getElementById('songAlbum');
-    //     songAlbum.innerHTML = "Album: " + song.album;
-    // })

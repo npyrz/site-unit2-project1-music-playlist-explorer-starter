@@ -1,4 +1,4 @@
-let reviews = [
+let playlists = [
     {
         "id": "1",
         "playlist_image": "https://picsum.photos/200/300?random=1",

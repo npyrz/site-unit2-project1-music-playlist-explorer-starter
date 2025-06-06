@@ -147,6 +147,7 @@ Add your response here
 
 ### Open-source libraries used
 
+- https://picsum.photos/ (Used for images of playlists and songs)
 ### Shout out
 
 - Caleb
