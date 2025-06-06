@@ -56,7 +56,6 @@ function createReviewElement(review) {
    const imgModal = document.getElementById('playlistImage');
    imgModal.src = review.playlist_image;
 
-
    const songList = document.getElementById("songList");
    songList.innerHTML = " ";
 
@@ -94,6 +93,55 @@ function createReviewElement(review) {
       songContainer.appendChild(img);
       songContainer.appendChild(songInfo);
       songList.appendChild(songContainer);
+
+      const shuffleButton = document.getElementById("shuffle-button");
+   shuffleButton.onclick = function() {
+   console.log("clicked");
+   const shuffle = [...review.songs];
+   for (let i = shuffle.length -1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffle[i], shuffle[j]] = [shuffle[j], shuffle[i]];
+      console.log("New songs");
+
+      songList.innerHTML = " ";
+
+      shuffle.forEach(song => {
+      const songContainer = document.createElement("div");
+      songContainer.classList.add("songLeftSide");
+
+      const img = document.createElement("img");
+      img.src = song.img;
+      img.classList.add("songImg");
+
+      const songInfo = document.createElement("div");
+      songInfo.classList.add("songInfo");
+
+      const title = document.createElement("h2");
+      title.classList.add("songTitle");
+      title.textContent = song.title;
+      songInfo.appendChild(title);
+
+      const artist = document.createElement("p");
+      artist.classList.add("songArtist");
+      artist.textContent = "Artist: " + song.artist;
+      songInfo.appendChild(artist);
+
+      const album = document.createElement("p");
+      album.classList.add("songAlbum");
+      album.textContent = song.album;
+      songInfo.appendChild(album);
+
+      const duration = document.createElement("p");
+      duration.classList.add("songAlbum");
+      duration.textContent = song.duration;
+      songInfo.appendChild(duration);
+
+      songContainer.appendChild(img);
+      songContainer.appendChild(songInfo);
+      songList.appendChild(songContainer);
+   });
+   }
+   };
    });
 
    
@@ -112,7 +160,6 @@ function createReviewElement(review) {
 
 function loadReviews() {
    const reviewList = document.getElementById('playlist-cards')
-   
    for (const review of reviews) {
       const reviewElement = createReviewElement(review)
       reviewList.appendChild(reviewElement)
@@ -130,17 +177,11 @@ function errorPlaylistNotify() {
 
 function loaderrorPlaylists() {
    const reviewList = document.getElementById('playlist-cards')
-   
    for (const review of reviews) {
       const reviewElement = errorPlaylistNotify(review)
       reviewList.appendChild(reviewElement)
    }
 };
-
-const shuffleButton = document.getElementById("shuffle-button");
-shuffleButton.addEventListener('click', function() {
-   console.log("clicked");
-   });
 
 
 
