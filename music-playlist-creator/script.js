@@ -56,18 +56,21 @@ function createReviewElement(review) {
    const imgModal = document.getElementById('playlistImage');
    imgModal.src = review.playlist_image;
 
-   review.songs.forEach(song => {
-      const songTitle = document.getElementById("songTitle");
-      songTitle.innerHTML = song.title;
-      const songArtist = document.getElementById("songArtist")
-      songArtist.innerHTML = "Artist: " + song.artist;
-      const songDuration = document.getElementById("songDuration");
-      songDuration.innerHTML = song.duration;
-      const songImg = document.getElementById('songImg');
-      songImg.src = song.img;
-      const songAlbum = document.getElementById('songAlbum');
-      songAlbum.innerHTML = "Album: " + song.album;
-   })
+
+   
+
+   // review.songs.forEach(song => {
+   //    const songTitle = document.getElementById("songTitle");
+   //    songTitle.innerHTML = song.title;
+   //    const songArtist = document.getElementById("songArtist")
+   //    songArtist.innerHTML = "Artist: " + song.artist;
+   //    const songDuration = document.getElementById("songDuration");
+   //    songDuration.innerHTML = song.duration;
+   //    const songImg = document.getElementById('songImg');
+   //    songImg.src = song.img;
+   //    const songAlbum = document.getElementById('songAlbum');
+   //    songAlbum.innerHTML = "Album: " + song.album;
+   // })
 
    
    modal.style.display = "block";
