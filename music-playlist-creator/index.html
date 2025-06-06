@@ -6,6 +6,7 @@
     
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <script src="https://kit.fontawesome.com/d8b4305d3c.js" crossorigin="anonymous"></script>
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -28,17 +29,29 @@
         <div class="modal-main">
 
         <div class="upper-modal">
-        <img id="playlistImage">
+        <img id="playlistImage"/>
         <div class="modalInfoContent">
             <h1 id="playlistTitle"></h1>
             <p id="artistName"></p>
         </div>
-        <div class="songList"></div>
+        </div>
+        
+        <div class="modal-bottom">
+        <div class="songList" id="songList">
+        <div class="songLeftSide">
+        <img id="songImg" class="songImg"/>
+        <div class="songInfo">
+        <h1 class="songTitle" id="songTitle"></h1>
+        <p class="songArtist" id="songArtist"></p>
+        <p class="songAlbum" id="songAlbum"></p>
+        </div>
+        </div>
+        <div class="songDuration" id="songDuration"></div>
+        </div>
         </div>
         
 
-        <div class="modal-side"></div>
-        <div class="songItem"></div>
+        </div>
         </div>
         </div>
         </div>

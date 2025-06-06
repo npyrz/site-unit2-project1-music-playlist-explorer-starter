@@ -7,8 +7,10 @@ let reviews =  [
         "songs": [
             {
             "title": "a",
-            "artist": "",
-            "duration": ""
+            "artist": "Papa Johns",
+            "duration": "4:32",
+            "album": "All The Food",
+            "img": "https://picsum.photos/200/300"
             }
         ]
         },
@@ -20,8 +22,10 @@ let reviews =  [
         "songs": [
             {
             "title": "b",
-            "artist": "",
-            "duration": ""
+            "artist": "Jimmy Cooks",
+            "duration": "11:00",
+            "album": "All The Food",
+            "img": "https://picsum.photos/200/300"
             }
         ]
         },
@@ -33,8 +37,10 @@ let reviews =  [
         "songs": [
             {
             "title": "c",
-            "artist": "",
-            "duration": ""
+            "artist": "Mark Halls",
+            "duration": "4:12",
+            "album": "All The Food",
+            "img": "https://picsum.photos/200/300"
             }
         ]
         }

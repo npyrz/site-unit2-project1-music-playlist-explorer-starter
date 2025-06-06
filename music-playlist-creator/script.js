@@ -15,12 +15,37 @@ function createReviewElement(review) {
    playlistAuthor.textContent = review.playlist_author;
    reviewDiv.appendChild(playlistAuthor);
 
+   const likesIcon = document.createElement("i");
+   likesIcon.setAttribute("class", "fa-regular fa-heart");
+   reviewDiv.appendChild(likesIcon);
+
+   likesIcon.addEventListener('click', function() {
+      console.log("HEY")
+      var likeStatus = false;
+
+      if (likeStatus = false) {
+         likesIcon.setAttribute("class", "fa-regular fa-heart");
+         reviewDiv.appendChild(likesIcon);
+         likeStatus = true;
+      };
+      elseif (likeStatus = true) {
+         likesIcon.setAttribute("class", "fa-solid fa-heart");
+         reviewDiv.appendChild(likesIcon);
+         likeStatus = false;
+      }
+   });
+
+   // add event handler to check if clickec then changed to 
+   // <i class="fa-solid fa-heart"></i>
+   // increment 
+   // if clicked added then decrement and change back
+
    const playlistLikes = document.createElement("p");
    playlistLikes.textContent = review.playlist_likes;
    reviewDiv.appendChild(playlistLikes);
 
 
-   reviewDiv.addEventListener('click', function() {
+   playlistImg.addEventListener('click', function() {
    const modal = document.getElementById("modal-overlay");
    const span = document.getElementsByClassName("close")[0];
    const headerModal = document.getElementById('playlistTitle');
@@ -29,6 +54,21 @@ function createReviewElement(review) {
    authorModal.innerHTML = review.playlist_author;
    const imgModal = document.getElementById('playlistImage');
    imgModal.src = review.playlist_image;
+
+   review.songs.forEach(song => {
+      const songTitle = document.getElementById("songTitle");
+      songTitle.innerHTML = song.title;
+      const songArtist = document.getElementById("songArtist")
+      songArtist.innerHTML = song.artist;
+      const songDuration = document.getElementById("songDuration");
+      //songDuration.innerHTML = song.duration;
+      const songImg = document.getElementById('songImg');
+      songImg.src = song.img;
+      const songAlbum = document.getElementById('songAlbum');
+      songAlbum.innerHTML = song.album;
+      // FIX THE LOCATION OF DURATION
+   })
+
    
    modal.style.display = "block";
    span.onclick = function() {
@@ -52,13 +92,24 @@ function loadReviews() {
    }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 function errorPlaylistNotify() {
    const reviewDiv = document.createElement('div');
    reviewDiv.setAttribute('class', 'playlist-item');
    const playlistName = document.createElement("h1");
    playlistName.textContent = `Error: There are no playlists added!`;
    reviewDiv.appendChild(playlistName);
-
    return reviewDiv;
 }
 
