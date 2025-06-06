@@ -4,7 +4,7 @@ let reviews = [
         "playlist_image": "https://picsum.photos/200/300?random=1",
         "playlist_name": "Chill Vibes",
         "playlist_author": "Alice Johnson",
-        "playlist_likes": "25",
+        "playlist_likes": "0",
         "songs": [
             {
                 "id": "1",

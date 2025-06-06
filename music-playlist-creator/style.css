@@ -41,7 +41,6 @@ header {
     height: 250px;
 }
 
-
 .playlist-item:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 40px 0 rgba(0, 0, 0, 0.40);
 }
@@ -162,14 +161,12 @@ header {
 }
 
 .like-button {
-    background-color: #84e0afea;
-    border: none;
-    color: white;
+    
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size:30px;
     border-radius: 15px;
 }
 
@@ -210,8 +207,19 @@ header {
     margin-right: 25px;
 }
 
-.liked {
+
+.delete-button {
     background-color: rgb(244, 74, 74);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-right: 25px;
+    margin-top: 25px;
 }
 
 .featuredList {

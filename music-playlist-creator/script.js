@@ -15,9 +15,9 @@ function createReviewElement(review) {
    playlistAuthor.textContent = "Creator: " + review.playlist_author;
    reviewDiv.appendChild(playlistAuthor);
 
-   const likesIcon = document.createElement("button");
+   const likesIcon = document.createElement("a");
    likesIcon.setAttribute("class", "like-button");
-   likesIcon.innerHTML = "Like";
+   likesIcon.innerHTML = "🤍";
    reviewDiv.appendChild(likesIcon);
 
    const playlistLikes = document.createElement("p");
@@ -29,16 +29,14 @@ function createReviewElement(review) {
    likesIcon.addEventListener('click', function() {
       let amount = parseInt(review.playlist_likes);
       if (!liked) {
-         likesIcon.classList.add("liked");
-         likesIcon.innerHTML = "Liked";
+         likesIcon.innerHTML = "❤️";
          amount++;
          liked = true;
       }  
       else {
          amount;
-         liked = false;
-         likesIcon.classList.remove("liked");
-         likesIcon.innerHTML = "Like";
+         liked = false; 
+         likesIcon.innerHTML = "🤍";
       }
 
       playlistLikes.textContent = amount;
@@ -144,7 +142,6 @@ function createReviewElement(review) {
    };
    });
 
-   
    modal.style.display = "block";
    span.onclick = function() {
    modal.style.display = "none";
@@ -182,8 +179,6 @@ function loaderrorPlaylists() {
       reviewList.appendChild(reviewElement)
    }
 };
-
-
 
 document.addEventListener("DOMContentLoaded", (event) => {
    try {
