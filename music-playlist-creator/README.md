@@ -2,7 +2,7 @@
 
 Submitted by: Noah Pyrzanowski
 
-Estimated time spent: ~20 Hours
+Estimated time spent: ~22 Hours
 
 Deployed Application: [Music Playlist Explorer Deployed Site](https://site-unit2-project1-music-playlist-qc4h.onrender.com/)
 
@@ -129,7 +129,7 @@ Deployed Application: [Music Playlist Explorer Deployed Site](https://site-unit2
   - [ ] Selecting a sort option should result in a reordering based on the selected sort while maintaining a grid view.
 
 ### Walkthrough Video
-`ADD_EMBEDDED_CODE_HERE`
+https://www.loom.com/share/2f0cc825792a4e2eab8a2c525c83ca35?sid=be4a0bf4-937a-4662-83e0-59c212fc5098
 
 ### Reflection
 
@@ -148,6 +148,7 @@ As mentioned above it took me awhile to get back into the langauge and doing web
 ### Open-source libraries used
 
 - https://picsum.photos/ (Used for images of playlists and songs)
+
 ### Shout out
 
 - Caleb
